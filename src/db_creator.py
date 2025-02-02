@@ -7,7 +7,7 @@ def create_db(db_name: str, params: dict[str, Any]) -> None:
     """Создание базы данных с необходимыми таблицами"""
 
     # создание базы данных
-    conn = psycopg2.connect(dbname='postgres', **params)
+    conn = psycopg2.connect(dbname="postgres", **params)
     conn.autocommit = True
     cur = conn.cursor()
 

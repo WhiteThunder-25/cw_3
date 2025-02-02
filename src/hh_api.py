@@ -7,7 +7,7 @@ class Parser(ABC):
     """Aбстрактный класс для парсинга"""
 
     @abstractmethod
-    def load_vacancies(self, employer_id: str) -> list[dict]:
+    def load_vacancies(self, employer_id: int) -> list[dict]:
         """Получение вакансий с API"""
         pass
 

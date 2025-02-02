@@ -1,8 +1,8 @@
 from config import config
 from src.db_creator import create_db
 from src.db_manager import DBManager
-from src.hh_api import HeadHunterAPI
 from src.fill_tables import enter_data_into_tables
+from src.hh_api import HeadHunterAPI
 from src.utils import get_employer_info, get_vacancy_info
 
 
@@ -12,8 +12,7 @@ def main(employers_names: list[str]) -> None:
 
     # создание базы данных
     params = config()
-
-
+    create_db("hh_ru", params)
     # загрузка вакансий
     for employer in employers_names:
         vacancies_info = HeadHunterAPI().load_vacancies(employer)
@@ -74,7 +73,6 @@ def main(employers_names: list[str]) -> None:
 
 
 if __name__ == "__main__":
-    employers_names = ["78638", "3529", "80", "981", "68587", "1322149", "127256",
-                 "818312", "2739158", "644105"]
+    employers_names = ["78638", "3529", "80", "981", "68587", "1322149", "127256", "818312", "2739158", "644105"]
 
     main(employers_names)
