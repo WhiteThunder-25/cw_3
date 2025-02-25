@@ -9,7 +9,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
-database.init
+database.ini
 develop-eggs/
 dist/
 downloads/
