@@ -7,14 +7,8 @@ def create_db(db_name: str, params: dict[str, Any]) -> None:
     """Создание базы данных с необходимыми таблицами"""
 
     # создание базы данных
-    conn = psycopg2.connect(dbname='postgres', **params)
+    conn = psycopg2.connect(dbname="postgres", **params)
     conn.autocommit = True
-    cur = conn.cursor()
-
-    cur.execute(f"DROP DATABASE IF EXISTS {db_name}")
-    cur.execute(f"CREATE DATABASE {db_name}")
-
-    conn.close()
 
     with conn.cursor() as cur:
         try:

@@ -8,7 +8,7 @@ class Parser(ABC):
 
     @abstractmethod
     def load_vacancies(self, employer_id: str) -> list[dict]:
-        """Получение вакансий с API"""
+        """Получение вакансий с по API"""
         pass
 
 
@@ -30,7 +30,7 @@ class HeadHunterAPI(Parser):
 
         print("Ошибка получения данных")
 
-    def load_vacancies(self, employer_id: int) -> list:
+    def load_vacancies(self, employer_id: str) -> list:
         """Получение вакансий с hh.ru"""
 
         self.__params["employer_id"] = employer_id

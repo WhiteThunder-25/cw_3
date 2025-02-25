@@ -2,7 +2,7 @@ from typing import Any
 
 
 def get_employer_info(vacancy_data: dict[str, Any]) -> dict[str, Any]:
-    """Получение словаря с данными о работодателе"""
+    """Получение словаря с данными о работадателе"""
 
     name = vacancy_data.get("employer").get("name")
     url = vacancy_data.get("employer").get("alternate_url")

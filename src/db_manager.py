@@ -4,10 +4,10 @@ import psycopg2
 
 
 class DBManager:
-    """Класс для получения информации о вакансиях из базы данных"""
+    """Класс для получения ифнормации о вакансиях из базы данных"""
 
     def __init__(self, db_name: str, params: dict[str, Any]) -> None:
-        """Инициализатор класса DBManager"""
+        """Инициализато класса DBManager"""
         self.db_name = db_name
         self.__params = params
 
